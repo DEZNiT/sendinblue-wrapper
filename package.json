@@ -1,0 +1,31 @@
+{
+  "name": "sendinblue_ts_wrapper",
+  "version": "1.0.0",
+  "description": "A wrapper for sendingblue api",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run serve ",
+    "build": "npm run build-ts && npm run lint",
+    "serve": "node dist/server.js",
+    "watch-node": "nodemon dist/server.js",
+    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run watch-ts\" \"npm run watch-node\" ",
+    "build-ts": "tsc",
+    "watch-ts": "tsc -w",
+    "lint": "eslint . --ext .ts"
+  },
+  "author": "Deznit",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.20.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.6.0",
+    "@typescript-eslint/eslint-plugin": "^3.9.1",
+    "@typescript-eslint/parser": "^3.9.1",
+    "concurrently": "^5.3.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.7.0",
+    "nodemon": "^2.0.4",
+    "typescript": "^4.0.2"
+  }
+}
